@@ -1,0 +1,36 @@
+nav {
+    display: flex;
+    justify-content: space-around;
+    background: white;
+    padding: 10px 0;
+  }
+  
+  nav.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+  }
+  
+  nav.transparent {
+    background: transparent;
+  }
+  
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 15px;
+  }
+  
+  li.disabled a {
+    pointer-events: none;
+    opacity: 0.5;
+  }
+  
+  a {
+    text-decoration: none;
+    color: black;
+  }
+  

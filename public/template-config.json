@@ -1,0 +1,13 @@
+{
+  "menu": {
+    "items": [
+      { "label": "Home", "route": "/home", "enabled": true },
+      { "label": "About Us", "route": "/about", "enabled": true },
+      { "label": "Services", "route": "/services", "enabled": true },
+      { "label": "Contact", "route": "/contact", "enabled": true }
+    ],
+    "sticky": false,
+    "transparent": true,
+    "visible": true
+  }
+}
