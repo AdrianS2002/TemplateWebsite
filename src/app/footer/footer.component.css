@@ -1,19 +1,10 @@
-/* Set up a flex container for the entire page */
-
-#app-root {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-}
-
-/* Footer styles */
 footer {
-    background-color: #333;
-    color: white;
-    padding: 10px 0;
+    background-color: #007BFF;
+    color: #f0f0f0; 
+    padding: 15px 0;
     text-align: center;
     flex-shrink: 0;
-    /* Prevent footer from shrinking */
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2); /* Umbră subtilă */
 }
 
 footer.sticky {
@@ -28,15 +19,21 @@ footer ul {
     margin: 0;
     display: flex;
     justify-content: center;
-    gap: 15px;
+    gap: 20px;
+}
+
+footer ul li a {
+    text-decoration: none;
+    color:  #ffffff; /* Galben strălucitor */
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+footer ul li a:hover {
+    color:#ffcc00; /* Schimbă culoarea la hover */
 }
 
 footer ul li.disabled a {
     pointer-events: none;
     opacity: 0.5;
-}
-
-footer ul li a {
-    text-decoration: none;
-    color: white;
 }

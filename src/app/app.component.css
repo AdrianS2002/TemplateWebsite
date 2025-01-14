@@ -1,9 +1,8 @@
-#content {
-    margin-left: 250px; /* Same width as the expanded sidebar */
-    transition: margin-left 0.3s;
-  }
-  
-  .sidebar:not(.expanded) + #content {
-    margin-left: 60px; /* Adjust for collapsed sidebar */
-  }
-  
+#app-root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: linear-gradient(to bottom, #ffffff, #e6e6e6); /* Gradient de fundal */
+  font-family: 'Arial', sans-serif;
+}
+
