@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { RouterLink } from '@angular/router';
+import { ConfigService } from '../config.service';
 
 @Component({
   selector: 'app-footer',
@@ -12,16 +13,15 @@ import { RouterLink } from '@angular/router';
 export class FooterComponent implements OnInit {
 
   footerConfig: any;
+  constructor(private configService: ConfigService) {}
 
   async ngOnInit(): Promise<void> {
     try {
-      const response = await fetch('template-config.json');
-      const config = await response.json();
-      console.log('Loaded config:', config); // Verifică ce se încarcă
+      const config = await this.configService.getConfig();
+      console.log('Loaded config:', config);
       this.footerConfig = config.footer;
     } catch (error) {
       console.error('Error loading footer configuration:', error);
     }
-
   }
 }

@@ -1,4 +1,5 @@
 /* Set up a flex container for the entire page */
+
 #app-root {
     display: flex;
     flex-direction: column;
