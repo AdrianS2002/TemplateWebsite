@@ -1,0 +1,48 @@
+/* Sidebar Styles */
+.sidebar {
+    background-color: #f4f4f4;
+    width: 250px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    overflow: hidden;
+    transition: width 0.3s;
+  }
+  
+  .sidebar.expanded {
+    width: 250px;
+  }
+  
+  .sidebar:not(.expanded) {
+    width: 60px;
+  }
+  
+  .sidebar .toggle-btn {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+  }
+  
+  .sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .sidebar ul li {
+    padding: 10px;
+  }
+  
+  .sidebar ul li a {
+    text-decoration: none;
+    color: #333;
+  }
+  
+  .sidebar ul li a:hover {
+    color: #007BFF;
+  }
+  
