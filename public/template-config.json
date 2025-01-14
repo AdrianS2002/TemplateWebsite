@@ -9,5 +9,14 @@
     "sticky": false,
     "transparent": true,
     "visible": true
+  },
+  "footer": {
+    "enabled": true,
+    "sticky": true,
+    "labels": [
+      { "label": "Privacy Policy", "route": "/privacy-policy", "enabled": true },
+      { "label": "Terms of Service", "route": "/terms-of-service", "enabled": true },
+      { "label": "Contact Us", "route": "/contact", "enabled": true }
+    ]
   }
 }
