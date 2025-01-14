@@ -1,7 +1,5 @@
 <div *ngIf="sidebarConfig?.enabled" class="sidebar" [class.expanded]="isExpanded">
-  <button class="toggle-btn" (click)="sidebarService.toggleSidebar()">
-    {{ isExpanded ? 'Collapse' : 'Expand' }}
-  </button>
+ 
   <ul *ngIf="isExpanded && sidebarConfig?.pages[currentPage]">
     <li *ngFor="let item of sidebarConfig.pages[currentPage]">
       <a [routerLink]="item.route">{{ item.label }}</a>
