@@ -18,5 +18,26 @@
       { "label": "Terms of Service", "route": "/terms-of-service", "enabled": true },
       { "label": "Contact Us", "route": "/contact", "enabled": true }
     ]
+  },
+  "sidebar": {
+    "enabled": true,
+    "pages": {
+      "/home": [
+        { "label": "Dashboard", "route": "/home/dashboard" },
+        { "label": "Profile", "route": "/home/profile" }
+      ],
+      "/about": [
+        { "label": "Team", "route": "/about/team" },
+        { "label": "History", "route": "/about/history" }
+      ],
+      "/services": [
+        { "label": "Web Development", "route": "/services/web" },
+        { "label": "App Development", "route": "/services/app" }
+      ],
+      "/contact": [
+        { "label": "Email Us", "route": "/contact/email" },
+        { "label": "Locate Us", "route": "/contact/location" }
+      ]
+    }
   }
 }
