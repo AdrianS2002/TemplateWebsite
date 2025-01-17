@@ -8,4 +8,8 @@
     {
         <button class="sidebar-toggle" (click)="toggleSidebar()">Toggle Sidebar</button>
     }
+    <app-language-picker
+    [languages]="languagePickerConfig?.languages"
+    (languageSelected)="onLanguageSelected($event)">
+  </app-language-picker>
 </nav>

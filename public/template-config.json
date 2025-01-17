@@ -1,10 +1,26 @@
 {
   "menu": {
     "items": [
-      { "label": "Home", "route": "/home", "enabled": true },
-      { "label": "About Us", "route": "/about", "enabled": true },
-      { "label": "Services", "route": "/services", "enabled": true },
-      { "label": "Contact", "route": "/contact", "enabled": true }
+      {
+        "label": "Home",
+        "route": "/home",
+        "enabled": true
+      },
+      {
+        "label": "About Us",
+        "route": "/about",
+        "enabled": true
+      },
+      {
+        "label": "Services",
+        "route": "/services",
+        "enabled": true
+      },
+      {
+        "label": "Contact",
+        "route": "/contact",
+        "enabled": true
+      }
     ],
     "sticky": false,
     "transparent": true,
@@ -14,29 +30,90 @@
     "enabled": true,
     "sticky": true,
     "labels": [
-      { "label": "Privacy Policy", "route": "/privacy-policy", "enabled": true },
-      { "label": "Terms of Service", "route": "/terms-of-service", "enabled": true },
-      { "label": "Contact Us", "route": "/contact", "enabled": true }
+      {
+        "label": "Privacy Policy",
+        "route": "/privacy-policy",
+        "enabled": true
+      },
+      {
+        "label": "Terms of Service",
+        "route": "/terms-of-service",
+        "enabled": true
+      },
+      {
+        "label": "Contact Us",
+        "route": "/contact",
+        "enabled": true
+      }
+    ]
+  },
+  "languagePicker": {
+    "enabled": true,
+    "languages": [
+      {
+        "label": "Română",
+        "code": "ro"
+      },
+      {
+        "label": "English",
+        "code": "en"
+      },
+      {
+        "label": "Deutsch",
+        "code": "de"
+      },
+      {
+        "label": "Español",
+        "code": "es"
+      },
+      {
+        "label": "Italiano",
+        "code": "it"
+      }
     ]
   },
   "sidebar": {
     "enabled": true,
     "pages": {
       "/home": [
-        { "label": "Dashboard", "route": "/home/dashboard" },
-        { "label": "Profile", "route": "/home/profile" }
+        {
+          "label": "Dashboard",
+          "route": "/home/dashboard"
+        },
+        {
+          "label": "Profile",
+          "route": "/home/profile"
+        }
       ],
       "/about": [
-        { "label": "Team", "route": "/about/team" },
-        { "label": "History", "route": "/about/history" }
+        {
+          "label": "Team",
+          "route": "/about/team"
+        },
+        {
+          "label": "History",
+          "route": "/about/history"
+        }
       ],
       "/services": [
-        { "label": "Web Development", "route": "/services/web" },
-        { "label": "App Development", "route": "/services/app" }
+        {
+          "label": "Web Development",
+          "route": "/services/web"
+        },
+        {
+          "label": "App Development",
+          "route": "/services/app"
+        }
       ],
       "/contact": [
-        { "label": "Email Us", "route": "/contact/email" },
-        { "label": "Locate Us", "route": "/contact/location" }
+        {
+          "label": "Email Us",
+          "route": "/contact/email"
+        },
+        {
+          "label": "Locate Us",
+          "route": "/contact/location"
+        }
       ]
     }
   }

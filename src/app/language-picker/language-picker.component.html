@@ -1,0 +1,12 @@
+<div class="language-picker">
+  <button class="dropdown-toggle">Language</button>
+  <ul class="dropdown-menu">
+    @for(lang of languages(); track lang.code)
+    {
+        <li>
+            <a href="#" (click)="selectLanguage(lang.code)">{{ lang.label }}</a>
+        </li>
+    }
+    
+  </ul>
+</div>

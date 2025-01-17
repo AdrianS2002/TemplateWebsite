@@ -1,0 +1,48 @@
+.language-picker {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-toggle {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 14px;
+  }
+  
+  .dropdown-toggle:hover {
+    background-color: #0056b3;
+  }
+  
+  .dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    list-style: none;
+    padding: 10px;
+    margin: 0;
+    z-index: 1000;
+  }
+  
+  .language-picker:hover .dropdown-menu {
+    display: block;
+  }
+  
+  .dropdown-menu li {
+    padding: 5px 0;
+  }
+  
+  .dropdown-menu li a {
+    text-decoration: none;
+    color: black;
+    font-size: 14px;
+    display: block;
+  }
+  
+  .dropdown-menu li a:hover {
+    background-color: #f0f0f0;
+  }
+  
