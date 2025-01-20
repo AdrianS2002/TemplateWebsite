@@ -1,4 +1,4 @@
-# Language Switcher & Configurable Sidebar
+# Website template
 
 A dynamic Angular app with a menu, footer, language switcher, and sidebar, fully configurable via JSON.
 
