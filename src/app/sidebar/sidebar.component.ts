@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { Router, ActivatedRoute, RouterLink } from '@angular/router';
+import { Router, ActivatedRoute,NavigationEnd, RouterLink } from '@angular/router';
 import { SidebarService } from './sidebar.service';
 
 @Component({
@@ -23,12 +23,19 @@ export class SidebarComponent implements OnInit {
       const config = await response.json();
       this.sidebarConfig = config.sidebar;
 
-      // Detect the current page and update the sidebar
-      this.router.events.subscribe(() => {
-        this.currentPage = this.router.url.split('?')[0]; // Current route without query params
+      // Setează currentPage inițial
+      this.currentPage = this.router.url.split('?')[0]; // Rutează fără parametri de query
+      console.log(`Initial page: ${this.currentPage}`);
+
+      // Ascultă evenimentele de navigare
+      this.router.events.subscribe((event) => {
+        if (event instanceof NavigationEnd) {
+          this.currentPage = this.router.url.split('?')[0];
+          console.log(`Updated page: ${this.currentPage}`);
+        }
       });
 
-      // Subscribe to the sidebar state
+      // Ascultă starea sidebar-ului
       this.sidebarService.isExpanded$.subscribe((state) => {
         this.isExpanded = state;
       });
