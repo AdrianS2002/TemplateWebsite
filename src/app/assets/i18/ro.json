@@ -1,0 +1,43 @@
+{
+  "menu": {
+    "home": "Acasă",
+    "about": "Despre Noi",
+    "services": "Servicii",
+    "contact": "Contact"
+  },
+  "footer": {
+    "privacyPolicy": "Politica de Confidențialitate",
+    "termsOfService": "Termeni și Condiții",
+    "contactUs": "Contactează-ne"
+  },
+  "sidebar": {
+    "dashboard": "Panou de Control",
+    "profile": "Profil",
+    "team": "Echipă",
+    "history": "Istorie",
+    "webdevelopment": "Dezvoltare Web",
+    "appdevelopment": "Dezvoltare de Aplicații",
+    "emailus": "Trimite un Email",
+    "locateus": "Localizează-ne"
+  },
+  "languagePicker": {
+    "languages": {
+      "ro": "Română",
+      "en": "Engleză",
+      "de": "Germană",
+      "es": "Spaniolă",
+      "it": "Italiană"
+    }
+  },
+
+  "others":{
+    "toggle": "Afisare Sidebar",
+    "language": "Limba",
+    "home" : "Acasă",
+    "about" : "Despre Noi",
+    "services" : "Serviciile Noastre",
+    "contact" : "Contactează-ne",
+    "privacy" : "Politica de Confidențialitate",
+    "terms" : "Termeni și Condiții"
+  }
+}

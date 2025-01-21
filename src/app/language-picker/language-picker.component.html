@@ -1,12 +1,8 @@
 <div class="language-picker">
-  <button class="dropdown-toggle">Language</button>
+  <button class="dropdown-toggle">{{ translationService.getTranslation('others', 'language')}}</button>
   <ul class="dropdown-menu">
-    @for(lang of languages(); track lang.code)
-    {
-        <li>
-            <a href="#" (click)="selectLanguage(lang.code)">{{ lang.label }}</a>
-        </li>
-    }
-    
+    <li *ngFor="let lang of languages; trackBy: trackByLangCode">
+      <a href="#" (click)="selectLanguage(lang.code); $event.preventDefault()"> {{ translationService.getLanguageName(lang.code) }}</a>
+    </li>
   </ul>
 </div>

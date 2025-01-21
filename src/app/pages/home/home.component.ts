@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { TranslationService } from '../../language-picker/translation.service';
 
 @Component({
   selector: 'app-home',
@@ -8,5 +9,5 @@ import { Component } from '@angular/core';
   styleUrl: './home.component.css'
 })
 export class HomeComponent {
-
+  constructor(public translationService: TranslationService) {}
 }
