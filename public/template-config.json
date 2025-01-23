@@ -7,7 +7,7 @@
         "enabled": true
       },
       {
-        "label": "About Us",
+        "label": "about",
         "route": "/about",
         "enabled": true
       },
@@ -31,17 +31,17 @@
     "sticky": true,
     "labels": [
       {
-        "label": "Privacy Policy",
+        "label": "privacyPolicy",
         "route": "/privacy-policy",
         "enabled": true
       },
       {
-        "label": "Terms of Service",
+        "label": "termsOfService",
         "route": "/terms-of-service",
         "enabled": true
       },
       {
-        "label": "Contact Us",
+        "label": "contactUs",
         "route": "/contact",
         "enabled": true
       }
@@ -51,7 +51,7 @@
     "enabled": true,
     "languages": [
       {
-        "label": "Română",
+        "label": "Romanian",
         "code": "ro"
       },
       {
@@ -97,21 +97,21 @@
       ],
       "/services": [
         {
-          "label": "Web Development",
+          "label": "webDevelopment",
           "route": "/services/web"
         },
         {
-          "label": "App Development",
+          "label": "appDevelopment",
           "route": "/services/app"
         }
       ],
       "/contact": [
         {
-          "label": "Email Us",
+          "label": "emailUs",
           "route": "/contact/email"
         },
         {
-          "label": "Locate Us",
+          "label": "locateUs",
           "route": "/contact/location"
         }
       ]

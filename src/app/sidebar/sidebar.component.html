@@ -2,7 +2,7 @@
  
   <ul *ngIf="isExpanded && sidebarConfig?.pages[currentPage]">
     <li *ngFor="let item of sidebarConfig.pages[currentPage]">
-      <a [routerLink]="item.route">{{ item.label }}</a>
+      <a [routerLink]="item.route"> {{ translationService.getTranslation('sidebar', item.label.toLowerCase()) }}</a>
     </li>
   </ul>
 </div>

@@ -1,0 +1,44 @@
+{
+  "menu": {
+    "home": "Home",
+    "about": "Chi Siamo",
+    "services": "Servizi",
+    "contact": "Contatto"
+  },
+  "footer": {
+    "privacyPolicy": "Informativa sulla Privacy",
+    "termsOfService": "Termini di Servizio",
+    "contactUs": "Contattaci"
+  },
+  "sidebar": {
+    "dashboard": "Pannello di Controllo",
+    "profile": "Profilo",
+    "team": "Squadra",
+    "history": "Storia",
+    "webdevelopment": "Sviluppo Web",
+    "appdevelopment": "Sviluppo Applicazioni",
+    "emailus": "Invia un'Email",
+    "locateus": "Trova la Posizione"
+  },
+  "languagePicker": {
+    "languages": {
+      "ro": "Romeno",
+      "en": "Inglese",
+      "de": "Tedesco",
+      "es": "Spagnolo",
+      "it": "Italiano"
+    }
+  },
+  "others": {
+  "toggle": "Mostra Sidebar",
+  "language": "Lingua",
+  "home": "Home",
+  "about": "Chi Siamo",
+  "services": "I Nostri Servizi",
+  "contact": "Contattaci",
+  "privacy": "Politica sulla Privacy",
+  "terms": "Termini e Condizioni"
+}
+
+
+}

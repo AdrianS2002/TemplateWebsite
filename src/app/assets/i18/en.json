@@ -1,0 +1,43 @@
+{
+  "menu": {
+    "home": "Home",
+    "about": "About Us",
+    "services": "Services",
+    "contact": "Contact"
+  },
+  "footer": {
+    "privacyPolicy": "Privacy Policy",
+    "termsOfService": "Terms of Service",
+    "contactUs": "Contact Us"
+  },
+ "sidebar": {
+    "dashboard": "Dashboard",
+    "profile": "Profile",
+    "team": "Team",
+    "history": "History",
+    "webdevelopment": "Web Development",
+    "appdevelopment": "App Development",
+    "emailus": "Email Us",
+    "locateus": "Locate Us"
+  },
+  "languagePicker": {
+    "languages": {
+      "ro": "Romanian",
+      "en": "English",
+      "de": "German",
+      "es": "Spanish",
+      "it": "Italian"
+    }
+  },
+  "others": {
+  "toggle": "Toggle Sidebar",
+  "language": "Language",
+  "home": "Home",
+  "about": "About Us",
+  "services": "Our Services",
+  "contact": "Contact Us",
+  "privacy": "Privacy Policy",
+  "terms": "Terms and Conditions"
+}
+
+}

@@ -1,12 +1,12 @@
 <nav *ngIf="menuConfig?.visible" [class.sticky]="menuConfig?.sticky" [class.transparent]="menuConfig?.transparent">
     <ul>
         <li *ngFor="let item of menuConfig?.items" [class.disabled]="!item.enabled">
-            <a *ngIf="item.enabled" [routerLink]="item.route">{{ item.label }}</a>
+            <a *ngIf="item.enabled" [routerLink]="item.route">  {{ translationService.getTranslation('menu', item.label.toLowerCase()) }}</a>
         </li>
     </ul>
     @if(sidebarConfig?.enabled)
     {
-        <button class="sidebar-toggle" (click)="toggleSidebar()">Toggle Sidebar</button>
+        <button class="sidebar-toggle" (click)="toggleSidebar()"> {{ translationService.getTranslation('others', 'toggle') }}</button>
     }
     <app-language-picker
     [languages]="languagePickerConfig?.languages"

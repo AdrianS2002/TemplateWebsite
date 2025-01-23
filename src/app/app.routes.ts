@@ -4,20 +4,8 @@ import { HomeComponent } from './pages/home/home.component';
 import { AboutComponent } from './pages/about/about.component';
 import { ServicesComponent } from './pages/services/services.component';
 import { ContactComponent } from './pages/contact/contact.component';
-
-@Component({
-  template:` <h1>Privacy Policy</h1> `,
-  standalone:true
-})
-export class PrivacyPolicyComponent {}
-
-@Component({
-  template:` <h1>Terms of Service</h1> `,
-  standalone:true
-})
-export class TermsOfService {}
-
-
+import { PrivacyPolicyComponent } from './pages/privacy-policy/privacy-policy.component';
+import { TermsServiceComponent } from './pages/terms-service/terms-service.component';
 
 export const routes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -25,6 +13,6 @@ export const routes: Routes = [
   { path: 'services', component: ServicesComponent },
   { path: 'contact', component: ContactComponent },
   {path: 'privacy-policy', component: PrivacyPolicyComponent},
-  {path: 'terms-of-service', component: TermsOfService},
+  {path: 'terms-of-service', component: TermsServiceComponent},
   { path: '', redirectTo: '/home', pathMatch: 'full' } // Default route
 ];

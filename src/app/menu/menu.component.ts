@@ -1,10 +1,10 @@
-import { Component, inject, OnInit } from '@angular/core';
+import { Component, Inject, inject, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ConfigService } from '../config.service';
 import { RouterLink, RouterOutlet } from '@angular/router';
 import { SidebarService } from '../sidebar/sidebar.service';
 import { LanguagePickerComponent } from "../language-picker/language-picker.component";
-//import { LanguageService } from '../language-picker/languageService';
+import { TranslationService } from '../language-picker/translation.service';
 @Component({
   selector: 'app-menu',
   standalone: true,
@@ -16,8 +16,9 @@ export class MenuComponent implements OnInit {
   menuConfig: any;
   sidebarConfig: any;
   languagePickerConfig: any;
+
   
-  constructor(private configService: ConfigService, private sidebarService: SidebarService) {}
+  constructor(private configService: ConfigService, private sidebarService: SidebarService, public translationService: TranslationService) {}
   async ngOnInit(): Promise<void> {
     try {
       const config = await this.configService.getConfig();
@@ -30,13 +31,14 @@ export class MenuComponent implements OnInit {
       console.error('Error loading menu configuration:', error);
     }
   }
+  onLanguageSelected(languageCode: string): void {
+    console.log('Language selected:', languageCode);
+    this.translationService.setLanguage(languageCode); // Schimbă limba
+  }
 
   toggleSidebar() {
     this.sidebarService.toggleSidebar(); // Call the service to toggle sidebar state
   }
 
-  onLanguageSelected(languageCode: string): void {
-   
-    console.log(`Selected language: ${languageCode}`);
-  }
+  
 }

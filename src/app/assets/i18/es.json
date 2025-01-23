@@ -1,0 +1,44 @@
+{
+  "menu": {
+    "home": "Inicio",
+    "about": "Sobre Nosotros",
+    "services": "Servicios",
+    "contact": "Contacto"
+  },
+  "footer": {
+    "privacyPolicy": "Política de Privacidad",
+    "termsOfService": "Términos del Servicio",
+    "contactUs": "Contáctanos"
+  },
+  "sidebar": {
+    "dashboard": "Panel de Control",
+    "profile": "Perfil",
+    "team": "Equipo",
+    "history": "Historia",
+    "webdevelopment": "Desarrollo Web",
+    "appdevelopment": "Desarrollo de Aplicaciones",
+    "emailus": "Envíanos un Correo",
+    "locateus": "Encuéntranos"
+  },
+  "languagePicker": {
+    "languages": {
+      "ro": "Rumano",
+      "en": "Inglés",
+      "de": "Alemán",
+      "es": "Español",
+      "it": "Italiano"
+    }
+  },
+ "others": {
+  "toggle": "Mostrar Sidebar",
+  "language": "Idioma",
+  "home": "Inicio",
+  "about": "Sobre Nosotros",
+  "services": "Nuestros Servicios",
+  "contact": "Contáctanos",
+  "privacy": "Política de Privacidad",
+  "terms": "Términos y Condiciones"
+}
+
+
+}
