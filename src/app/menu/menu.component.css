@@ -1,39 +1,114 @@
-nav {
-  display: flex;
-  justify-content: space-around;
-  background: #007BFF; /* Albastru strălucitor */
-  padding: 10px 0;
-  color: white;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Umbră subtilă */
-}
 
-nav.sticky {
+nav {
+  background-color: #1a1a2e;
+  padding: 12px 20px;
   position: fixed;
   top: 0;
-  width: 100%;
-  z-index: 1000;
+  left: 0;
+  width: 99%;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+  display: flex;
+  justify-content: flex-start; /* Align items to the left */
+  align-items: center;
+  gap: 20px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
 }
 
 nav.transparent {
-  background: rgba(0, 123, 255, 0.8); /* Transparent albastru */
+  background-color: rgba(26, 26, 46, 0.8);
 }
 
 nav ul {
-  list-style: none;
+  list-style-type: none;
   margin: 0;
   padding: 0;
   display: flex;
-  gap: 20px;
+  gap: 15px; /* Added space between items */
+}
+
+nav ul li {
+  margin: 5px 0; /* Added vertical spacing */
 }
 
 nav ul li a {
+  color: #f5f5f5;
   text-decoration: none;
-  color: white;
-  font-size: 16px;
   font-weight: bold;
-  transition: color 0.3s ease;
+  padding: 12px 18px;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 nav ul li a:hover {
-  color: #ffcc00; /* Galben strălucitor la hover */
+  background-color: #f5f5f5;
+  color: #1a1a2e;
+}
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 15px; /* Ensures spacing between action buttons */
+}
+
+.sidebar-toggle {
+  background-color: #1a1a2e;
+  color: #f5f5f5;
+  padding: 12px 18px;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.sidebar-toggle:hover {
+  background-color: #f5f5f5;
+  color: #1a1a2e;
+}
+
+.language-picker {
+  display: flex;
+  align-items: center;
+}
+
+/* Responsive Navbar */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    padding: 1px;
+    align-items: flex-start;
+  }
+
+  nav ul {
+    flex-direction: column;
+    width: 100%;
+    align-items: flex-start;
+  }
+
+  .nav-actions {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+  }
+
+  .language-picker {
+    width: 100%;
+    text-align: left;
+  }
+}
+
+@media (max-width: 480px) {
+  nav ul {
+    gap: 5px;
+  }
+
+  nav ul li a {
+    padding: 10px 15px;
+  }
+
+  .sidebar-toggle,
+  .language-picker .dropdown-toggle {
+    padding: 10px 15px;
+  }
 }
