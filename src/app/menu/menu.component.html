@@ -1,4 +1,12 @@
 <nav *ngIf="menuConfig?.visible" [class.sticky]="menuConfig?.sticky" [class.transparent]="menuConfig?.transparent">
+    <div *ngIf="translationService.errorMessage | async as error" class="error-message">
+        {{ error }}
+    </div>
+    
+    <div *ngIf="configError" class="error-message">
+        {{ configError }}
+    </div>
+    
     <ul>
         <li *ngFor="let item of menuConfig?.items" [class.disabled]="!item.enabled">
             <a *ngIf="item.enabled" [routerLink]="item.route">  {{ translationService.getTranslation('menu', item.label.toLowerCase()) }}</a>
