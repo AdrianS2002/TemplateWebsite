@@ -40,9 +40,9 @@ export class MenuComponent implements OnInit {
 
     
   }
-  onLanguageSelected(languageCode: string): void {
+  async onLanguageSelected(languageCode: string): Promise<void> {
     console.log('Language selected:', languageCode);
-    this.translationService.setLanguage(languageCode); // Schimbă limba
+    await this.translationService.setLanguage(languageCode); // Schimbă limba
   }
 
   toggleSidebar() {
