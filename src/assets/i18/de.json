@@ -3,7 +3,8 @@
     "home": "Startseite",
     "about": "Über Uns",
     "services": "Dienstleistungen",
-    "contact": "Kontakt"
+    "contact": "Kontakt",
+    "locations": "Standorte"
   },
   "footer": {
     "privacyPolicy": "Datenschutzrichtlinie",
@@ -37,7 +38,8 @@
   "services": "Unsere Dienstleistungen",
   "contact": "Kontaktiere Uns",
   "privacy": "Datenschutzrichtlinie",
-  "terms": "Allgemeine Geschäftsbedingungen"
+  "terms": "Allgemeine Geschäftsbedingungen",
+  "Select a Country and City" : "Wählen Sie ein Land und eine Stadt"
 }
 
 

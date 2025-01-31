@@ -3,7 +3,8 @@
     "home": "Acasă",
     "about": "Despre Noi",
     "services": "Servicii",
-    "contact": "Contact"
+    "contact": "Contact",
+    "locations": "Locații"
   },
   "footer": {
     "privacyPolicy": "Politica de Confidențialitate",
@@ -38,6 +39,7 @@
     "services" : "Serviciile Noastre",
     "contact" : "Contactează-ne",
     "privacy" : "Politica de Confidențialitate",
-    "terms" : "Termeni și Condiții"
+    "terms" : "Termeni și Condiții",
+    "Select a Country and City" : "Selectează o tara și un oraș"
   }
 }

@@ -3,7 +3,8 @@
     "home": "Home",
     "about": "About Us",
     "services": "Services",
-    "contact": "Contact"
+    "contact": "Contact",
+    "locations": "Locations"
   },
   "footer": {
     "privacyPolicy": "Privacy Policy",
@@ -37,7 +38,8 @@
   "services": "Our Services",
   "contact": "Contact Us",
   "privacy": "Privacy Policy",
-  "terms": "Terms and Conditions"
+  "terms": "Terms and Conditions",
+  "Select a Country and City" : "Select a county and city"
 }
 
 }
