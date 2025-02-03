@@ -17,6 +17,11 @@
         "enabled": true
       },
       {
+        "label": "Locations",
+        "route": "/locations",
+        "enabled": true
+      },
+      {
         "label": "Contact",
         "route": "/contact",
         "enabled": true
