@@ -1,0 +1,22 @@
+<div class="container">
+    <h3>{{translationService.getTranslation('others', 'Select a Country and City')}}</h3>
+
+    <div *ngIf="errorMessage" class="error-message">
+        {{ errorMessage }}
+    </div>
+
+    <!-- Country Dropdown -->
+    <select (change)="onCountrySelected($event)">
+        <option value="">Select Country</option> 
+        <option *ngFor="let country of countries" [value]="country">{{ country }}</option>
+    </select>
+
+    <!-- City Dropdown (Disabled when loading or no cities available) -->
+    <select [disabled]="isLoading || !cities.length">
+        <option value="">Select City</option>
+        <option *ngFor="let city of cities" [value]="city">{{ city }}</option>
+    </select>
+
+    <!-- Loading Spinner -->
+    <div *ngIf="isLoading" class="spinner"></div>
+</div>
