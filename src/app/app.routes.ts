@@ -7,7 +7,7 @@ import { ContactComponent } from './pages/contact/contact.component';
 import { PrivacyPolicyComponent } from './pages/privacy-policy/privacy-policy.component';
 import { TermsServiceComponent } from './pages/terms-service/terms-service.component';
 import { LocationsComponent } from './pages/locations/locations.component';
-
+import { AuthComponent } from './auth/auth.component';
 export const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'about', component: AboutComponent },
@@ -16,5 +16,6 @@ export const routes: Routes = [
   {path: 'privacy-policy', component: PrivacyPolicyComponent},
   {path: 'terms-of-service', component: TermsServiceComponent},
   {path: 'locations', component: LocationsComponent},
-  { path: '', redirectTo: '/home', pathMatch: 'full' } // Default route
+  { path: '', redirectTo: '/home', pathMatch: 'full' }, // Default route
+  {path: 'auth', component: AuthComponent}
 ];
