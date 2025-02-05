@@ -9,7 +9,7 @@ In the app, users can sign up, log in, reset their password, and securely authen
 
 ## Features
 
-### 1. **Authentication System
+### 1. **Authentication System**
 -Users can sign up, log in, and reset their password securely.
 -Error handling for authentication failures (e.g., incorrect credentials, email not found).
 -Uses Firebase Authentication for managing user sessions.
