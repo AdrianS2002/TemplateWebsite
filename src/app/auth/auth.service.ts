@@ -1,8 +1,10 @@
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { BehaviorSubject, catchError, map, Observable, Subject, switchMap, tap, throwError } from 'rxjs';
+import { BehaviorSubject, catchError, from, map, Observable, Subject, switchMap, take, tap, throwError } from 'rxjs';
 import { User } from './user.model';
 import { Router } from '@angular/router';
+import { DatabaseService } from '../database/database.service';
+import { TranslationService } from '../language-picker/translation.service';
 
 interface AuthResponseData {
     idToken: string;
@@ -23,22 +25,36 @@ export class AuthService {
     private getUserDataUrl = `https://identitytoolkit.googleapis.com/v1/accounts:lookup?key=${this.apiKey}`;
 
     user = new BehaviorSubject<User | null>(null);
-    constructor(private http: HttpClient, private router: Router) {
+    constructor(private http: HttpClient, private router: Router, private databaseService: DatabaseService, private translationService: TranslationService) {
         this.autoLogin();
     }
 
-    signup(email: string, password: string): Observable<AuthResponseData> {
+    signup(email: string, password: string, language: string): Observable<AuthResponseData> {
+        const hashedPassword = btoa(password);
+        const theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+        const detectedLanguage = navigator.language.slice(0, 2); // Detectăm limba browserului
+    
         return this.http.post<AuthResponseData>(this.signUpUrl, {
             email,
             password,
             returnSecureToken: true
         })
-            .pipe(
-                switchMap((resData) => {
-                    return this.sendVerificationEmail(resData.idToken);
-                }),
-                catchError(this.handleError), tap(resData => { this.handleAuthentification(resData.email, resData.localId, resData.idToken, +resData.expiresIn); })
-            );
+        .pipe(
+            switchMap((resData) => {
+                return this.sendVerificationEmail(resData.idToken).pipe(
+                    switchMap(() => {
+                        // Salvăm profilul utilizatorului cu limba detectată
+                        return this.databaseService.saveUserProfile(resData.localId, email, hashedPassword, detectedLanguage, theme);
+                    }),
+                    tap(() => {
+                        this.translationService.setLanguage(detectedLanguage); // 🔹 Setăm limba în Language Picker
+                    }),
+                    map(() => resData)
+                );
+            }),
+            catchError(this.handleError),
+            tap(resData => { this.handleAuthentification(resData.email, resData.localId, resData.idToken, +resData.expiresIn); })
+        );
     }
 
     sendVerificationEmail(idToken: string): Observable<any> {
@@ -72,25 +88,64 @@ export class AuthService {
             password,
             returnSecureToken: true
         })
-            .pipe(
-                switchMap((resData) => {
-                    return this.checkEmailVerification(resData.idToken).pipe(
-                        switchMap((isVerified) => {
-                            if (!isVerified) {
-                                return throwError(() => ({
-                                    error: {
-                                        error: { message: 'EMAIL_NOT_VERIFIED' }
-                                    }
-                                }));
-                            }
-                            return [resData]; // Allow login if verified
-                        })
-                    );
-                }),
-                catchError(this.handleError),
-                tap(resData => { this.handleAuthentification(resData.email, resData.localId, resData.idToken, +resData.expiresIn); })
-            );
+        .pipe(
+            switchMap((resData) => {
+                return this.checkEmailVerification(resData.idToken).pipe(
+                    switchMap((isVerified) => {
+                        if (!isVerified) {
+                            return throwError(() => ({
+                                error: {
+                                    error: { message: 'EMAIL_NOT_VERIFIED' }
+                                }
+                            }));
+                        }
+                        
+                        return from(this.databaseService.getUserProfile(resData.localId)).pipe(
+                            tap(userProfile => {
+                                if (userProfile && userProfile.language) {
+                                    this.translationService.setLanguage(userProfile.language);
+                                }
+                            }),
+                            map(() => resData)
+                        );
+                    })
+                );
+            }),
+            catchError(this.handleError),
+            tap(resData => { this.handleAuthentification(resData.email, resData.localId, resData.idToken, +resData.expiresIn); })
+        );
     }
+    
+
+    updateUserPassword(newPassword: string): Observable<any> {
+        return this.user.pipe(
+            take(1),
+            switchMap(user => {
+                if (!user || !user.token) {
+                    return throwError(() => new Error('No authenticated user!'));
+                }
+    
+                return this.http.post<any>(
+                    `https://identitytoolkit.googleapis.com/v1/accounts:update?key=${this.apiKey}`,
+                    {
+                        idToken: user.token,
+                        password: newPassword,
+                        returnSecureToken: true
+                    }
+                ).pipe(
+                    switchMap(resData => {
+                        // 🔹 Convertim Promise în Observable cu `from()`
+                        return from(this.databaseService.updateUserPassword(user.id, newPassword)).pipe(
+                            map(() => resData) // Returnăm răspunsul inițial după actualizare
+                        );
+                    }),
+                    tap(() => console.log('Password successfully updated in Firebase Authentication and Firestore.')),
+                    catchError(this.handleError)
+                );
+            })
+        );
+    }
+    
 
     autoLogin() {
         const userData: {

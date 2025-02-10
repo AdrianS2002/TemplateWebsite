@@ -41,7 +41,13 @@
   "contact": "Kontaktiere Uns",
   "privacy": "Datenschutzrichtlinie",
   "terms": "Allgemeine Geschäftsbedingungen",
-  "Select a Country and City" : "Wählen Sie ein Land und eine Stadt"
+  "Select a Country and City" : "Wählen Sie ein Land und eine Stadt",
+  "Password" : "Passwort",
+  "Forgot Password?": "Passwort vergessen?",
+  "Login" : "Anmelden",
+  "SignUp" : "Registrieren",
+  "Enter your password": "Geben Sie Ihr Passwort ein",
+  "Enter your email": "Geben Sie Ihre E-Mail-Adresse ein"
 }
 
 

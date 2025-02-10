@@ -42,7 +42,13 @@
   "contact": "Contáctanos",
   "privacy": "Política de Privacidad",
   "terms": "Términos y Condiciones",
-  "Select a Country and City" : "Selecciona un país y ciudad"
+  "Select a Country and City" : "Selecciona un país y ciudad",
+  "Password" : "Contraseña",
+  "Forgot Password?": "¿Olvidaste tu contraseña?",
+  "Login" : "Iniciar Sesión",
+  "SignUp" : "Registrarse",
+  "Enter your password": "Ingresa tu contraseña",
+  "Enter your email": "Ingresa tu correo electrónico"
 }
 
 

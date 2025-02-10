@@ -41,7 +41,13 @@
   "contact": "Contattaci",
   "privacy": "Politica sulla Privacy",
   "terms": "Termini e Condizioni",
-  "Select a Country and City" : "Seleziona un paese e una città"
+  "Select a Country and City" : "Seleziona un paese e una città",
+  "Password" :"Password",
+  "Forgot Password?": "Password dimenticata?",
+  "Login" : "Accedi",
+  "SignUp" : "Registrati",
+  "Enter your password": "Inserisci la tua password",
+  "Enter your email": "Inserisci la tua email"
 }
 
 
