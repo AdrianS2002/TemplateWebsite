@@ -41,7 +41,13 @@
   "contact": "Contact Us",
   "privacy": "Privacy Policy",
   "terms": "Terms and Conditions",
-  "Select a Country and City" : "Select a county and city"
+  "Select a Country and City" : "Select a county and city",
+  "Password" : "Password",
+  "Forgot Password?": "Forgot Password?",
+  "Login" : "Login",
+  "SignUp" : "SignUp",
+  "Enter your password": "Enter your password",
+  "Enter your email": "Enter your email"
 }
 
 }

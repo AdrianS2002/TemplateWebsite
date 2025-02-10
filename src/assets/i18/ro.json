@@ -42,6 +42,12 @@
     "contact" : "Contactează-ne",
     "privacy" : "Politica de Confidențialitate",
     "terms" : "Termeni și Condiții",
-    "Select a Country and City" : "Selectează o tara și un oraș"
+    "Select a Country and City" : "Selectează o tara și un oraș",
+    "Password" : "Parolă",
+    "Forgot Password?" : "Ai uitat parola?",
+    "Login" : "Autentificare",
+    "SignUp" : "Înregistrare",
+    "Enter your password" : "Introdu parola",
+    "Enter your email" : "Introdu adresa de email"
   }
 }
