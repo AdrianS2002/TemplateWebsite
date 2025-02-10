@@ -5,7 +5,8 @@
     "services": "Servicios",
     "contact": "Contacto",
     "locations": "Ubicaciones",
-    "authentificate": "Autentificar"
+    "authentificate": "Autentificar",
+    "logout": "Cerrar Sesión"
   },
   "footer": {
     "privacyPolicy": "Política de Privacidad",

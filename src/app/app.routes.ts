@@ -8,14 +8,15 @@ import { PrivacyPolicyComponent } from './pages/privacy-policy/privacy-policy.co
 import { TermsServiceComponent } from './pages/terms-service/terms-service.component';
 import { LocationsComponent } from './pages/locations/locations.component';
 import { AuthComponent } from './auth/auth.component';
+import { AuthGuard } from './auth/auth.guard';
 export const routes: Routes = [
   { path: 'home', component: HomeComponent },
-  { path: 'about', component: AboutComponent },
-  { path: 'services', component: ServicesComponent },
-  { path: 'contact', component: ContactComponent },
-  {path: 'privacy-policy', component: PrivacyPolicyComponent},
-  {path: 'terms-of-service', component: TermsServiceComponent},
-  {path: 'locations', component: LocationsComponent},
-  { path: '', redirectTo: '/home', pathMatch: 'full' }, // Default route
+  { path: 'about', component: AboutComponent, canActivate: [AuthGuard] },
+  { path: 'services', component: ServicesComponent, canActivate: [AuthGuard] },
+  { path: 'contact', component: ContactComponent , },
+  {path: 'privacy-policy', component: PrivacyPolicyComponent,},
+  {path: 'terms-of-service', component: TermsServiceComponent, },
+  {path: 'locations', component: LocationsComponent, canActivate: [AuthGuard]},
+  { path: '', redirectTo: 'auth', pathMatch: 'full' }, // Default route
   {path: 'auth', component: AuthComponent}
 ];

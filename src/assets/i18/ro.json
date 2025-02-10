@@ -5,7 +5,8 @@
     "services": "Servicii",
     "contact": "Contact",
     "locations": "Locații",
-    "authentificate": "Autentificare"
+    "authentificate": "Autentificare",
+    "logout": "Deconectare"
   },
   "footer": {
     "privacyPolicy": "Politica de Confidențialitate",

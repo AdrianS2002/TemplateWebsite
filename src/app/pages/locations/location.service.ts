@@ -44,7 +44,7 @@ export class LocationService {
     } else {
       // Backend error
      //errorMessage = `Server returned code ${error.status}: ${error.message} asddsadadasdas`;
-      errorMessage = `Try again later.`;
+      errorMessage = `Network error: please try again later.`;
 
     }
 

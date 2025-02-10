@@ -8,11 +8,21 @@
     </div>
     
     <ul>
-        <li *ngFor="let item of menuConfig?.items" [class.disabled]="!item.enabled">
-            <a *ngIf="item.enabled" [routerLink]="item.route">  {{ translationService.getTranslation('menu', item.label.toLowerCase()) }}</a>
+        <ng-container *ngFor="let item of menuConfig?.items">
+            <li *ngIf="item.label.toLowerCase() === 'home'  || item.label.toLowerCase() === 'authentificate' || isAuthentificated"
+                [class.disabled]="!item.enabled">
+                <a *ngIf="item.enabled" [routerLink]="item.route">
+                    {{ translationService.getTranslation('menu', item.label.toLowerCase()) }}
+                </a>
+            </li>
+        </ng-container>
+        <li *ngIf="isAuthentificated">
+            <button (click)="onLogout()" class="btnLogout">Logout</button>
         </li>
     </ul>
-    @if(sidebarConfig?.enabled)
+    
+    
+    @if(sidebarConfig?.enabled && isAuthentificated)
     {
         <button class="sidebar-toggle" (click)="toggleSidebar()"> {{ translationService.getTranslation('others', 'toggle') }}</button>
     }
