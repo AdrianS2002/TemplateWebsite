@@ -3,6 +3,7 @@ import { FormsModule, NgForm } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { TranslationService } from '../language-picker/translation.service';
 import { AuthService } from './auth.service';
+import { Router } from '@angular/router';
 @Component({
 
     selector: 'app-auth',
@@ -20,7 +21,7 @@ export class AuthComponent {
     isLoading = false;
     error: string | null = null;
     successMessage: string | null = null;
-    constructor(private authService: AuthService) { }
+    constructor(private authService: AuthService, private router: Router) { }
     onSwitchMode() {
         this.isLoginMode = !this.isLoginMode;
     }
@@ -39,6 +40,7 @@ export class AuthComponent {
                 next: (resData) => {
                     console.log('Logged in:', resData);
                     this.isLoading = false;
+                    this.router.navigate(['/services']);
                 },
                 error: (errorMessage) => {
                     console.log(errorMessage);
@@ -54,6 +56,7 @@ export class AuthComponent {
                     console.log(resData);
                     this.isLoading = false;
                     this.isLoginMode = !this.isLoginMode;
+                    this.successMessage = "Verification email sent! Please check your inbox.";
                 },
                 error: (errorMessage) => {
                     console.log(errorMessage);

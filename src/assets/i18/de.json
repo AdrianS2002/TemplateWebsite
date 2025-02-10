@@ -5,7 +5,8 @@
     "services": "Dienstleistungen",
     "contact": "Kontakt",
     "locations": "Standorte",
-    "authentificate": "Authentifizieren"
+    "authentificate": "Authentifizieren",
+    "logout": "Ausloggen"
   },
   "footer": {
     "privacyPolicy": "Datenschutzrichtlinie",
