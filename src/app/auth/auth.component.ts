@@ -33,7 +33,10 @@ export class AuthComponent {
         }
         const email = form.value.email;
         const password = form.value.password;
-
+        const language = navigator.language.slice(0, 2);
+        const theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+        console.log("Detected theme:", theme);
+        console.log("Detected language:", language);
         if (this.isLoginMode) {
             this.isLoading = true;
             this.authService.login(email, password).subscribe({
@@ -51,7 +54,7 @@ export class AuthComponent {
         }
         else {
             this.isLoading = true;
-            this.authService.signup(email, password).subscribe({
+            this.authService.signup(email, password, language).subscribe({
                 next: (resData) => {
                     console.log(resData);
                     this.isLoading = false;
