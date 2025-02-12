@@ -7,6 +7,7 @@ import { LanguagePickerComponent } from "../language-picker/language-picker.comp
 import { TranslationService } from '../language-picker/translation.service';
 import { AuthService } from '../auth/auth.service';
 import { Subscription } from 'rxjs';
+import { ThemeService } from '../theme.service';
 @Component({
   selector: 'app-menu',
   standalone: true,
@@ -21,8 +22,9 @@ export class MenuComponent implements OnInit {
   errorMessage: string | null = null;
   configError: string | null = null;
   private userSub: Subscription | null = null;
+  theme: string = 'light';
   isAuthentificated = false;
-  constructor(private configService: ConfigService, private sidebarService: SidebarService, public translationService: TranslationService, private cdr: ChangeDetectorRef, private authService: AuthService, private router: Router) { }
+  constructor(private configService: ConfigService, private sidebarService: SidebarService, public translationService: TranslationService, private cdr: ChangeDetectorRef, private authService: AuthService, private router: Router, private themeService: ThemeService) { }
   async ngOnInit(): Promise<void> {
     try {
       const config = await this.configService.getConfig();
@@ -36,6 +38,9 @@ export class MenuComponent implements OnInit {
         this.isAuthentificated = !!user;
         console.log('User:', user);
 
+      });
+      this.themeService.theme$.subscribe(theme => {
+        this.theme = theme;
       });
       this.translationService.errorMessage.subscribe(error => {
         this.errorMessage = error;

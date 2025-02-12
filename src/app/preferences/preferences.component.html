@@ -1,0 +1,35 @@
+<div class="preferences-container">
+    <div class="preferences-header">
+        <h2>{{ translationService.getTranslation('preferences', 'edit') }}</h2>
+
+    </div>
+    <div *ngIf="errorMessage" class="error-message">
+        {{ errorMessage }}
+      </div>
+    
+      <div *ngIf="successMessage" class="success-message">
+        {{ successMessage }}
+      </div>
+    <div class="form-group">
+        <label for="language">{{ translationService.getTranslation('preferences', 'language') }}</label>
+        <select id="language" [(ngModel)]="selectedLanguage">
+            <option *ngFor="let lang of availableLanguages" [value]="lang.code">
+                {{ lang.label }}
+            </option>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label for="theme">{{ translationService.getTranslation('preferences', 'theme') }}</label>
+        <select id="theme" [(ngModel)]="selectedTheme">
+            <option value="light">{{ translationService.getTranslation('preferences', 'light') }}</option>
+            <option value="dark">{{ translationService.getTranslation('preferences', 'dark') }}</option>
+        </select>
+    </div>
+    <div class="divbtn">
+        <button (click)="savePreferences()" class="btn-save" [disabled]="isLoading">
+            {{ translationService.getTranslation('preferences', 'save') }}
+        </button>
+    </div>
+    <div *ngIf="isLoading" class="spinner"></div>
+</div>

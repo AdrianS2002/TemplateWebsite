@@ -6,7 +6,8 @@
     "contact": "Kontakt",
     "locations": "Standorte",
     "authentificate": "Authentifizieren",
-    "logout": "Ausloggen"
+    "logout": "Ausloggen",
+    "preferences": "Einstellungen"
   },
   "footer": {
     "privacyPolicy": "Datenschutzrichtlinie",
@@ -33,22 +34,47 @@
     }
   },
   "others": {
-  "toggle": "Sidebar Anzeigen",
-  "language": "Sprache",
-  "home": "Startseite",
-  "about": "Über Uns",
-  "services": "Unsere Dienstleistungen",
-  "contact": "Kontaktiere Uns",
-  "privacy": "Datenschutzrichtlinie",
-  "terms": "Allgemeine Geschäftsbedingungen",
-  "Select a Country and City" : "Wählen Sie ein Land und eine Stadt",
-  "Password" : "Passwort",
-  "Forgot Password?": "Passwort vergessen?",
-  "Login" : "Anmelden",
-  "SignUp" : "Registrieren",
-  "Enter your password": "Geben Sie Ihr Passwort ein",
-  "Enter your email": "Geben Sie Ihre E-Mail-Adresse ein"
-}
+    "toggle": "Sidebar Anzeigen",
+    "language": "Sprache",
+    "home": "Startseite",
+    "about": "Über Uns",
+    "services": "Unsere Dienstleistungen",
+    "contact": "Kontaktiere Uns",
+    "privacy": "Datenschutzrichtlinie",
+    "terms": "Allgemeine Geschäftsbedingungen",
+    "Select a Country and City": "Wählen Sie ein Land und eine Stadt",
+    "Password": "Passwort",
+    "Forgot Password?": "Passwort vergessen?",
+    "Login": "Anmelden",
+    "SignUp": "Registrieren",
+    "Enter your password": "Geben Sie Ihr Passwort ein",
+    "Enter your email": "Geben Sie Ihre E-Mail-Adresse ein"
+  },
+  "preferences": {
+    "edit": "Bearbeiten",
+    "language": "Sprache",
+    "theme": "Thema",
+    "dark": "Dunkel",
+    "light": "Licht",
+    "save": "Speichern"
+  },
 
-
+  "errors": {
+    "load_languages": "Die verfügbaren Sprachen konnten nicht geladen werden.",
+    "load_preferences": "Deine Einstellungen konnten nicht geladen werden.",
+    "offline": "Du bist offline. Die Einstellungen können nicht gespeichert werden.",
+    "update_preferences": "Beim Aktualisieren der Einstellungen ist ein Fehler aufgetreten.",
+    "email_exists": "Diese E-Mail-Adresse ist bereits registriert.",
+    "email_not_found": "Anmeldedaten wurden nicht gefunden.",
+    "invalid_password": "Ungültiges Passwort.",
+    "invalid_credentials": "Ungültige Anmeldedaten.",
+    "user_disabled": "Dieser Benutzer wurde deaktiviert.",
+    "invalid_token": "Ungültiges Sitzungstoken. Bitte melde dich erneut an.",
+    "email_not_verified": "Bitte bestätige deine E-Mail-Adresse, bevor du dich anmeldest."
+  },
+  "messages": {
+    "password_reset": "Passwort-Zurücksetzungs-E-Mail gesendet! Überprüfe dein Postfach.",
+    "verification_email": "Bestätigungs-E-Mail gesendet! Überprüfe dein Postfach.",
+    "preferences_updated": "Die Einstellungen wurden erfolgreich aktualisiert!"
+  }
 }

@@ -7,11 +7,15 @@ import { DatabaseService } from '../database/database.service';
   providedIn: 'root',
 })
 export class TranslationService {
+  setTheme(selectedTheme: string | undefined, userId: string) {
+    throw new Error('Method not implemented.');
+  }
   private translations: Record<string, any> = {};
   
   public currentLanguage = new BehaviorSubject<string>('en'); // Limba implicită
   language$ = this.currentLanguage.asObservable();
   public errorMessage = new BehaviorSubject<string | null>(null);
+  currentTheme: any;
 
   constructor(private http: HttpClient, private databaseService: DatabaseService) {
     this.loadTranslations('en'); // Încarcă limba implicită
@@ -92,4 +96,16 @@ export class TranslationService {
       console.error('Error loading user language:', error);
     }
   }
+
+  async getAvailableLanguages(): Promise<{ label: string; code: string }[]> {
+    const lang = this.currentLanguage.value;
+    
+    if (!this.translations[lang]) {
+      await this.loadTranslations(lang);
+    }
+  
+    const languages = this.translations[lang]?.languagePicker?.languages || {};
+    return Object.entries(languages).map(([code, label]) => ({ code, label: label as string }));
+  }
+  
 }

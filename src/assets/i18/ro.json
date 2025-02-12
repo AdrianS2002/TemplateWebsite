@@ -6,7 +6,8 @@
     "contact": "Contact",
     "locations": "Locații",
     "authentificate": "Autentificare",
-    "logout": "Deconectare"
+    "logout": "Deconectare",
+    "preferences": "Preferințe"
   },
   "footer": {
     "privacyPolicy": "Politica de Confidențialitate",
@@ -49,5 +50,32 @@
     "SignUp" : "Înregistrare",
     "Enter your password" : "Introdu parola",
     "Enter your email" : "Introdu adresa de email"
+  },
+
+  "preferences":{
+    "edit": "Editează",
+    "language":"Limba",
+    "theme":"Tema",
+    "dark":"Întunecat",
+    "light":"Luminos",
+    "save":"Salvează"
+  },
+  "errors": {
+    "load_languages": "Nu s-au putut încărca limbile disponibile.",
+    "load_preferences": "Nu s-au putut încărca preferințele tale.",
+    "offline": "Ești offline. Preferințele nu pot fi salvate.",
+    "update_preferences": "A apărut o eroare la actualizarea preferințelor.",
+    "email_exists": "Această adresă de email este deja înregistrată.",
+    "email_not_found": "Datele de autentificare nu au fost găsite.",
+    "invalid_password": "Parolă invalidă.",
+    "invalid_credentials": "Date de autentificare invalide.",
+    "user_disabled": "Acest utilizator a fost dezactivat.",
+    "invalid_token": "Token de sesiune invalid. Vă rugăm să vă autentificați din nou.",
+    "email_not_verified": "Vă rugăm să verificați emailul înainte de a vă autentifica."
+  },
+  "messages": {
+    "password_reset": "Email pentru resetarea parolei trimis! Verifică-ți căsuța de email.",
+    "verification_email": "Email de verificare trimis! Verifică-ți căsuța de email.",
+    "preferences_updated": "Preferințele au fost actualizate cu succes!"
   }
 }

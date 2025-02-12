@@ -7,7 +7,7 @@ import { AuthInterceptorService } from './app/auth/auth-interceptor.service';
 import { provideFirebaseApp, initializeApp } from '@angular/fire/app';
 import { provideFirestore, getFirestore } from '@angular/fire/firestore';
 
-// 📌 Definirea manuală a configurației Firebase
+
 const firebaseConfig = {
   apiKey: "AIzaSyAubzKJeHlwP8OHFZvx9NbcAwbfbtsGjdQ",
   authDomain: "templatewebsite-3e4ee.firebaseapp.com",

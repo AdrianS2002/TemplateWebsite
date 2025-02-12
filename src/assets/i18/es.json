@@ -6,7 +6,8 @@
     "contact": "Contacto",
     "locations": "Ubicaciones",
     "authentificate": "Autentificar",
-    "logout": "Cerrar Sesión"
+    "logout": "Cerrar Sesión",
+    "preferences": "Preferencias"
   },
   "footer": {
     "privacyPolicy": "Política de Privacidad",
@@ -22,7 +23,6 @@
     "appdevelopment": "Desarrollo de Aplicaciones",
     "emailus": "Envíanos un Correo",
     "locateus": "Encuéntranos"
-    
   },
   "languagePicker": {
     "languages": {
@@ -33,23 +33,47 @@
       "it": "Italiano"
     }
   },
- "others": {
-  "toggle": "Mostrar Sidebar",
-  "language": "Idioma",
-  "home": "Inicio",
-  "about": "Sobre Nosotros",
-  "services": "Nuestros Servicios",
-  "contact": "Contáctanos",
-  "privacy": "Política de Privacidad",
-  "terms": "Términos y Condiciones",
-  "Select a Country and City" : "Selecciona un país y ciudad",
-  "Password" : "Contraseña",
-  "Forgot Password?": "¿Olvidaste tu contraseña?",
-  "Login" : "Iniciar Sesión",
-  "SignUp" : "Registrarse",
-  "Enter your password": "Ingresa tu contraseña",
-  "Enter your email": "Ingresa tu correo electrónico"
-}
-
-
+  "others": {
+    "toggle": "Mostrar Sidebar",
+    "language": "Idioma",
+    "home": "Inicio",
+    "about": "Sobre Nosotros",
+    "services": "Nuestros Servicios",
+    "contact": "Contáctanos",
+    "privacy": "Política de Privacidad",
+    "terms": "Términos y Condiciones",
+    "Select a Country and City": "Selecciona un país y ciudad",
+    "Password": "Contraseña",
+    "Forgot Password?": "¿Olvidaste tu contraseña?",
+    "Login": "Iniciar Sesión",
+    "SignUp": "Registrarse",
+    "Enter your password": "Ingresa tu contraseña",
+    "Enter your email": "Ingresa tu correo electrónico"
+  },
+  "preferences": {
+    "edit": "Editar",
+    "language": "Idioma",
+    "theme": "Tema",
+    "dark": "Oscuro",
+    "light": "Claro",
+    "save": "Guardar"
+  },
+  "errors": {
+    "load_languages": "No se pudieron cargar los idiomas disponibles.",
+    "load_preferences": "No se pudieron cargar tus preferencias.",
+    "offline": "Estás desconectado. No se pueden guardar las preferencias.",
+    "update_preferences": "Ocurrió un error al actualizar las preferencias.",
+    "email_exists": "Este correo ya está registrado.",
+    "email_not_found": "Credenciales no encontradas.",
+    "invalid_password": "Contraseña inválida.",
+    "invalid_credentials": "Credenciales de inicio de sesión inválidas.",
+    "user_disabled": "Este usuario ha sido deshabilitado.",
+    "invalid_token": "Token de sesión no válido. Inicie sesión nuevamente.",
+    "email_not_verified": "Por favor, verifica tu correo electrónico antes de iniciar sesión."
+  },
+  "messages": {
+    "password_reset": "Correo de restablecimiento de contraseña enviado. ¡Revisa tu bandeja de entrada!",
+    "verification_email": "Correo de verificación enviado. ¡Revisa tu bandeja de entrada!",
+    "preferences_updated": "¡Preferencias actualizadas con éxito!"
+  }
 }

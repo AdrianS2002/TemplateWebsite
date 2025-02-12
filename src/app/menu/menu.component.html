@@ -16,6 +16,12 @@
                 </a>
             </li>
         </ng-container>
+        <li>
+            @if(isAuthentificated)
+            {
+                <a  [routerLink]="'/preferences'" >{{ translationService.getTranslation('menu', 'preferences') }}</a>
+            }
+        </li>
         <li *ngIf="isAuthentificated">
             <button (click)="onLogout()" class="btnLogout">Logout</button>
         </li>
@@ -26,6 +32,8 @@
     {
         <button class="sidebar-toggle" (click)="toggleSidebar()"> {{ translationService.getTranslation('others', 'toggle') }}</button>
     }
+
+   
     <app-language-picker
     [languages]="languagePickerConfig?.languages"
     (languageSelected)="onLanguageSelected($event)">

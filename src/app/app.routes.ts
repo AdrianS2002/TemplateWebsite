@@ -9,6 +9,7 @@ import { TermsServiceComponent } from './pages/terms-service/terms-service.compo
 import { LocationsComponent } from './pages/locations/locations.component';
 import { AuthComponent } from './auth/auth.component';
 import { AuthGuard } from './auth/auth.guard';
+import { PreferencesComponent } from './preferences/preferences.component';
 export const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'about', component: AboutComponent, canActivate: [AuthGuard] },
@@ -18,5 +19,6 @@ export const routes: Routes = [
   {path: 'terms-of-service', component: TermsServiceComponent, },
   {path: 'locations', component: LocationsComponent, canActivate: [AuthGuard]},
   { path: '', redirectTo: 'auth', pathMatch: 'full' }, // Default route
-  {path: 'auth', component: AuthComponent}
+  {path: 'auth', component: AuthComponent},
+  { path: 'preferences', component: PreferencesComponent, canActivate: [AuthGuard] }
 ];

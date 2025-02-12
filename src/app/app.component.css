@@ -1,3 +1,8 @@
+:root {
+  --background-light: linear-gradient(to bottom, #ffffff, #e6e6e6);
+  --background-dark: #fcfcfc;
+}
+
 #app-root {
   display: flex;
   flex-direction: column;
@@ -5,8 +10,12 @@
   right: 0;
   margin-top: 2.3rem;
   min-height: 100vh;
-  background: linear-gradient(to bottom, #ffffff, #e6e6e6); /* Gradient de fundal */
+  background: var(--background-light);
   font-family: 'Arial', sans-serif;
+}
+
+html[data-theme="dark"] #app-root {
+  background: var(--background-dark) !important;
 }
 
 @media (max-width: 768px) {
