@@ -6,14 +6,15 @@
     "contact": "Contact",
     "locations": "Locations",
     "authentificate": "Authentificate",
-    "logout": "Logout"
+    "logout": "Logout",
+    "preferences": "Preferences"
   },
   "footer": {
     "privacyPolicy": "Privacy Policy",
     "termsOfService": "Terms of Service",
     "contactUs": "Contact Us"
   },
- "sidebar": {
+  "sidebar": {
     "dashboard": "Dashboard",
     "profile": "Profile",
     "team": "Team",
@@ -33,21 +34,46 @@
     }
   },
   "others": {
-  "toggle": "Toggle Sidebar",
-  "language": "Language",
-  "home": "Home",
-  "about": "About Us",
-  "services": "Our Services",
-  "contact": "Contact Us",
-  "privacy": "Privacy Policy",
-  "terms": "Terms and Conditions",
-  "Select a Country and City" : "Select a county and city",
-  "Password" : "Password",
-  "Forgot Password?": "Forgot Password?",
-  "Login" : "Login",
-  "SignUp" : "SignUp",
-  "Enter your password": "Enter your password",
-  "Enter your email": "Enter your email"
-}
-
+    "toggle": "Toggle Sidebar",
+    "language": "Language",
+    "home": "Home",
+    "about": "About Us",
+    "services": "Our Services",
+    "contact": "Contact Us",
+    "privacy": "Privacy Policy",
+    "terms": "Terms and Conditions",
+    "Select a Country and City": "Select a county and city",
+    "Password": "Password",
+    "Forgot Password?": "Forgot Password?",
+    "Login": "Login",
+    "SignUp": "SignUp",
+    "Enter your password": "Enter your password",
+    "Enter your email": "Enter your email"
+  },
+  "preferences": {
+    "edit": "Edit",
+    "language": "Language",
+    "theme": "Theme",
+    "dark": "Dark",
+    "light": "Light",
+    "save": "Save"
+  },
+  "errors": {
+    "load_languages": "Failed to load available languages.",
+    "load_preferences": "Failed to load your preferences.",
+    "offline": "You are offline. Preferences cannot be saved.",
+    "update_preferences": "An error occurred while updating preferences.",
+    "email_exists": "This email exists already.",
+    "email_not_found": "Credentials were not found.",
+    "invalid_password": "Invalid password.",
+    "invalid_credentials": "Invalid login credentials.",
+    "user_disabled": "This user has been disabled.",
+    "invalid_token": "Invalid session token. Please login again.",
+    "email_not_verified": "Please verify your email before logging in."
+  },
+  "messages": {
+    "preferences_updated": "Preferences updated successfully!",
+    "password_reset": "Password reset email sent! Check your inbox.",
+    "verification_email": "Verification email sent! Please check your inbox."
+  }
 }

@@ -6,7 +6,8 @@
     "contact": "Contatto",
     "locations": "Posizioni",
     "authentificate": "Autentificare",
-    "logout": "Disconnettersi"
+    "logout": "Disconnettersi",
+    "preferences": "Preferenze"
   },
   "footer": {
     "privacyPolicy": "Informativa sulla Privacy",
@@ -33,22 +34,46 @@
     }
   },
   "others": {
-  "toggle": "Mostra Sidebar",
-  "language": "Lingua",
-  "home": "Home",
-  "about": "Chi Siamo",
-  "services": "I Nostri Servizi",
-  "contact": "Contattaci",
-  "privacy": "Politica sulla Privacy",
-  "terms": "Termini e Condizioni",
-  "Select a Country and City" : "Seleziona un paese e una città",
-  "Password" :"Password",
-  "Forgot Password?": "Password dimenticata?",
-  "Login" : "Accedi",
-  "SignUp" : "Registrati",
-  "Enter your password": "Inserisci la tua password",
-  "Enter your email": "Inserisci la tua email"
-}
-
-
+    "toggle": "Mostra Sidebar",
+    "language": "Lingua",
+    "home": "Home",
+    "about": "Chi Siamo",
+    "services": "I Nostri Servizi",
+    "contact": "Contattaci",
+    "privacy": "Politica sulla Privacy",
+    "terms": "Termini e Condizioni",
+    "Select a Country and City": "Seleziona un paese e una città",
+    "Password": "Password",
+    "Forgot Password?": "Password dimenticata?",
+    "Login": "Accedi",
+    "SignUp": "Registrati",
+    "Enter your password": "Inserisci la tua password",
+    "Enter your email": "Inserisci la tua email"
+  },
+  "preferences": {
+    "edit": "Modifica",
+    "language": "Lingua",
+    "theme": "Tema",
+    "dark": "Scuro",
+    "light": "Chiaro",
+    "save": "Salva"
+  },
+  "errors": {
+    "load_languages": "Impossibile caricare le lingue disponibili.",
+    "load_preferences": "Impossibile caricare le tue preferenze.",
+    "offline": "Sei offline. Le preferenze non possono essere salvate.",
+    "update_preferences": "Si è verificato un errore durante l'aggiornamento delle preferenze.",
+    "email_exists": "Questa email è già registrata.",
+    "email_not_found": "Credenziali non trovate.",
+    "invalid_password": "Password non valida.",
+    "invalid_credentials": "Credenziali di accesso non valide.",
+    "user_disabled": "Questo utente è stato disabilitato.",
+    "invalid_token": "Token di sessione non valido. Effettua nuovamente l'accesso.",
+    "email_not_verified": "Verifica la tua email prima di accedere."
+  },
+  "messages": {
+    "preferences_updated": "Preferenze aggiornate con successo!",
+    "password_reset": "Email di reimpostazione della password inviata! Controlla la tua casella di posta.",
+    "verification_email": "Email di verifica inviata! Controlla la tua casella di posta."
+  }
 }

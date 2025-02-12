@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { TranslationService } from '../language-picker/translation.service';
 import { AuthService } from './auth.service';
 import { Router } from '@angular/router';
+import { ThemeService } from '../theme.service';
 @Component({
 
     selector: 'app-auth',
@@ -19,13 +20,20 @@ export class AuthComponent {
 
     isLoginMode = true;
     isLoading = false;
+    theme: string = 'light';
     error: string | null = null;
     successMessage: string | null = null;
-    constructor(private authService: AuthService, private router: Router) { }
+    constructor(private authService: AuthService, private router: Router, private themeService: ThemeService) { }
     onSwitchMode() {
         this.isLoginMode = !this.isLoginMode;
     }
     translationService = inject(TranslationService)
+
+    ngOnInit() {
+        this.themeService.theme$.subscribe(theme => {
+            this.theme = theme;
+          });
+    }
     onSubmit(form: NgForm) {
         console.log(form.value);
         if (!form.valid) {
