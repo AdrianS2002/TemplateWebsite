@@ -53,7 +53,7 @@ export class AuthService {
                 );
             }),
             catchError(this.handleError),
-            tap(resData => { this.handleAuthentification(resData.email, resData.localId, resData.idToken, +resData.expiresIn); })
+           // tap(resData => { this.handleAuthentification(resData.email, resData.localId, resData.idToken, +resData.expiresIn); })
         );
     }
 
